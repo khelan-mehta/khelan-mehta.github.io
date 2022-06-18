@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lobster&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+:root,
+
+
+
+
+:root.light {
+    --responive-bg-color:#92E2F9;
+
+    --nav-color:#0f225e;
+  --bg-background-image: url("./cool-background.svg");
+  --text-color: #92E2F9;
+  --bg-color: #0f225e;
+  --byline-color:  white;
+  --logo-color: black;
+}
+ 
+:root.dark {
+    --responive-bg-color:#EAC6D0;
+    --nav-color:#EAC6D0;
+    --bg-background-image: url("./t2.svg");
+    --text-color: #EAC6D0;
+    --bg-color: #9C003C;
+    --byline-color:  #9C003C;
+    --logo-color: #9C003C;
+}
+
+:root.hyphy {
+    --responive-bg-color: #34CCC6;
+    --nav-color:#652060;
+    --bg-background-image: url("./t4.svg");
+    --text-color: white;
+    --bg-color: #652060;
+    --byline-color:  white;
+    --logo-color: black;
+}
+
+:root.black {
+    --responive-bg-color:#393939;
+    --nav-color: white;
+    --bg-background-image: url("./t3.svg");
+  --text-color: #CFCFCF;
+  --bg-color: #393939;
+  --byline-color:  white;
+  --logo-color: black;
+}
+
+:root.palms {
+    --responive-bg-color:#92E2F9;
+
+    --nav-color:#3F196A;
+  --bg-background-image: url("./t5.svg");
+  --text-color: #3F196A;
+  --bg-color: #FFFB83;
+  --byline-color:  white;
+  --logo-color: #3F196A;
+}
+
+
+body {
+    background-image: var(--bg-background-image);
+    background-repeat: no-repeat;
+    transition: background-image 0.5s;
+    background-size: cover;
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 0px; 
+    margin-right: 0px;
+    padding: 0;
+    width: 100%;
+    font-family: 'Lobster', cursive;
+    overflow: hidden;
+    height: 100%;
+}
+.navbar {
+    font-weight: 600;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 47px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.by-hr{
+    border: 4px solid var(--logo-color); position: relative; top: 10px; z-index: -1; opacity: 0.6;
+}
+
+.T{
+    font-size: 4rem;
+}
+
+.nav-r{
+    float: right;
+}
+
+.nav-l{
+    font-family: 'Lobster', cursive;
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 2rem;
+    color: var(--logo-color);
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.navbar button{
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.7s;
+}
+
+.navbar a{
+    text-decoration: none;
+    float: right;
+    padding: 14px 16px;
+    text-align: center;
+    color: var(--nav-color);
+    font-weight: 900;
+    transition: background-color 0.7s;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: 'Lobster', cursive;
+}
+
+a:hover{
+    
+    opacity:1;
+    color:black;
+    transition: background-color 0.7s;
+}
+
+button {
+    outline: none;
+  }
+
+
+.fall-img{
+    opacity: 0.1; position: absolute; left: -20px; top: -40px;  z-index: -1  ;
+}
+
+.closer-img{
+    opacity: 0.4; position: absolute; left: 10px; top: 40px;  z-index: -1  ;
+}
+
+.hope-img{
+    opacity: 1; position: absolute; left: -40px; top: 40px;  z-index: -1  ;
+}
+
+.writeup1{
+    
+    margin-top: 5rem;
+    margin-left: 5rem;
+    
+    border-color: transparent;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    width:30%;
+    height:400px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.poem{
+    margin: 30px;
+    
+}
+
+.slider {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px;
+    background-color: transparent;
+    
+    height: 380px;
+}
+
+.slider__slides {
+    height: 380px;
+    background-color: transparent;
+    width: 100%;
+    padding-top: 66%;
+}
+
+.slider__slide {
+    background-color: transparent;
+    position: absolute;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lemonchiffon;
+    transition: 1s;
+    opacity: 0;
+    background-color: transparent;
+}
+
+.slider__slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider__slide img {
+  width: 100%;
+}
+
+.slider__nav-button {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    opacity: .8;
+    cursor: pointer;
+}
+
+#nav-button--prev {
+    top: 50%;
+    left: -90px;
+    transform: translateY(-50%);
+}
+
+#nav-button--next {
+    top: 50%;
+    right: -90px;
+    transform: translateY(-50%);
+}
+
+#nav-button--prev::after,
+#nav-button--next::after {
+    content: "";
+    position: absolute;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 40%;
+    height: 40%;
+}
+
+#nav-button--next::after{
+    top: 50%;
+    right: 50%;
+    transform: translate(25%, -50%) rotate(-45deg);
+}
+
+#nav-button--prev::after {
+    top: 50%;
+    right: 50%;
+    transform: translate(75%, -50%) rotate(135deg);
+}
+
+.slider__nav {
+    position: absolute;
+    bottom: -13%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider__navlink {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    
+    background-color: var(--bg-color);
+    opacity: 1;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+.slider__navlink.active {
+    
+    background-color: #fff;
+    
+}
+
+
+@media screen and (max-width: 640px) {
+  .slider__nav-button {
+    height: 40px;
+    width: 40px;
+  }
+  .slider__navlink {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+/* The outermost element*/
+
+  .poem-title{
+      font-family: 'Lobster', cursive;
+      color: var(--text-color);
+      text-align: center;
+      padding-top: 0px;
+      margin: 0;
+    }
+    
+    .poem-content{
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 20;
+        color: var(--text-color);
+  }
+
+  .background {
+    
+    opacity: 1;
+    height: 400px;
+    position
+    :
+     absolute
+    ;
+      
+    display
+    :
+     block
+    ;
+      
+    top
+    : 0;
+      
+    left
+    : 0;
+      
+    z-index
+    : 0;
+    }
+
+
+    /* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; 
+}
+/* button */
+::-webkit-scrollbar-button {
+    background: transparent; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #666; 
+    
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+/* The track NOT covered by the handle.
+::-webkit-scrollbar-track-piece {
+    background: #000; 
+}
+/* Corner */
+::-webkit-scrollbar-corner {
+    background: #999; 
+}
+/* Resizer */
+::-webkit-resizer {
+    background: #111; 
+}
+
+.byline{
+    text-align: end; color:var(--byline-color); font-family: 'Dancing Script', cursive; margin-right: 10px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        background-color: var(--responive-bg-color);
+        background-image: none;
+    }
+
+   
+    .writeup1{
+        margin-top: 10rem;
+        margin-left: 3rem;
+        align-self: center;
+        width: 70%;
+        font-size: 1200%;
+    }
+    .slider__nav{
+        display: flex;
+        flex-direction: row;
+    }
+    #nav-button--prev {
+        top: 50%;
+        left: -40px;
+        transform: translateY(-50%);
+    }
+    
+    #nav-button--next {
+        top: 50%;
+        right: -40px;
+        transform: translateY(-50%);
+    }
+    .byline{
+        color: black;
+    }
+}

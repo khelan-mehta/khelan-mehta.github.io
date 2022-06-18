@@ -1,0 +1,103 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+    body{
+        background-image: url(./t2.svg);
+    }
+
+    .nav-r a{
+        color: #EAC6D0;
+    }
+
+    .me{
+        display: flex; flex-direction: row; justify-content: space-between;
+    }
+
+    .textboutme{
+        margin-left: 5rem; background-color: white; margin-right: 300px; height: 350px; margin-top: 100px; opacity: 0.9; border-radius: 20px;     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    @media screen and (max-width:900px){
+        body{
+            background-image: none;
+            background-color: #EAC6D0;
+        }
+
+        .navbar{
+            margin-top: 10px;
+        }
+        .nav-r a{
+        color: black;
+    }
+        .me{
+            display: flex;
+            flex-direction: column;
+        }
+        img{
+            align-self: center;
+            width: 50%;
+        }
+        .textboutme{
+            overflow: scroll;
+            margin-top: 10px;
+            margin-left: 50px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+    }
+
+</style>
+<script src=
+"./particles.min.js"
+></script>
+<script>
+    window.
+onload
+= function() {
+  Particles.
+init
+({
+    selector: 
+'.background'
+  });
+};
+</script>
+<body >
+    <div class="navbar">
+        <div class="nav-l">
+            <i class="T">T</i>houghts
+        </div>
+           <div class="nav-r">
+            <button class="nav-button"><a href="./index.html">Writings</a> </button>
+            
+            <button class="nav-button"><a href="./about.html">About</a> </button>
+           
+    
+           </div>
+           
+       </div>
+
+       <div class="me" style="">
+           <img src="./aboutme.png" alt="" style="margin-top: 2rem;">
+           <div class="textboutme" style="
+           ">
+               <h1 style="text-align: center;  margin: 20px; color: #EA8677;">Ciao !</h1>
+               <p style="text-align: justify;  font-size: larger; margin: 20px; color: #EA8677;">Khelan here. This is just a blog page I designed to share some of my writings. I am        completelty new at this but Poetry lures me so thought of giving this a stretch.
+                   If you want to share any of your work, ping me! we can probably make this page collaborative. Yeah so more about me... I am 
+                   currently preparing for entrance exams and am pretty jammed up there but am also interested in reading, webdesign and maintaining fitness. Ummm so yeah, this sums it up, enjoy reading(if you do )
+                    <br>
+                    <br>
+                   P.S this is a purely coded webpage :)
+               </p>
+           </div>
+
+       </div>
+       <canvas class=
+       "background" style="z-index: -1;">
+   </canvas>
+</body>
+</html>
