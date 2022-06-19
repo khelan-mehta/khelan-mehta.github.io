@@ -398,6 +398,7 @@ button {
     body{
         background-color: var(--responive-bg-color);
         background-image: none;
+        height:100%;
     }
 
    
