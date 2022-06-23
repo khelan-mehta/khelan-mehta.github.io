@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thoughts</title>
+    <script src="./particles.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lobster&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.background {
+    
+    opacity: 1;
+    
+    position
+    :
+     relative style="margin"
+    ;
+      
+  
+      
+    top
+    : 0;
+      
+    left
+    : 0;
+      
+   
+    }
+
+
         body{
             background-color: #92E2F9;
             overflow: hidden;
@@ -19,18 +42,19 @@
         }
 
         .form{
-
+            border: 1px black solid;
+            padding: 20px;
+            border-radius: 10px;
             justify-content: center;
-            margin-top: 15rem;
+            margin-top: 10rem;
             margin-left: 35rem;
             flex-direction: column;
             display: flex;
             width: 20%;
         }
         
-        form{   
-            
-            margin-left: 90px;
+        .hide-self{
+            display: none;
         }
         
         h1{
@@ -70,6 +94,10 @@
             padding: 4px;
         }
 
+        .buttons{
+            align-self: center;
+        }
+
         a{
             text-decoration: none;
             
@@ -84,9 +112,24 @@
             border: none;
             background-color: transparent; 
         }
+    
+        @media screen and (max-width: 800px){
+            .form{
+            margin-left: 30px;
+            align-self: center;
+            flex-direction: column;
+            display: flex;
+            width: 60%;
+            }
+
+            .buttons{
+                display: flex;
+
+            }
         
+        }
     </style>
-    <script src="./particles.min.js"></script>
+ 
 </head>
 <body>
     <div class="form">
@@ -94,15 +137,16 @@
        
         <input class="field" type="text" maxlength="20" placeholder="  Dhang ka naam dena !" required id="Name" >
         <input class="field" type="text" maxlength="10" minlength="10" placeholder=" Contact number :) " required id="number" >
-        
-        <button class="submit" id="insbtn">Submit</button>
+        <div class="buttons">
+        <button class="submit" id="insbtn" style="margin-left: 0%;">Submit</button>
         <form action="./index.html">  
-            <button class="submit" id="insbtn">Jumpin</button>
+            <button class="submit hide-self" id="insbtn2" style="margin-left: 0%">Jumpin</button>
         </form>
-            
+    </div>
     
     </div>  
     <script type="module">
+
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
@@ -137,13 +181,16 @@
    
     
     var insbtn = document.getElementById("insbtn");
+    var insbtn2 = document.getElementById("insbtn2");
     
     
     function InsertData(){
-    
+            insbtn2.classList.remove("hide-self");
+            insbtn.classList.add("hide-self");
             set(ref(db, "Names"+number.value), {
                 Names: name.value,
-                Number : number.value
+                Number : number.value,
+                
             })
             .then(()=>{
                 alert("data stored succesfully")
@@ -156,7 +203,11 @@
     
     insbtn.addEventListener('click', InsertData);
     </script>
-</body>
 
+
+</body>
+<canvas class=
+    "background" >
+</canvas>
 
 </html>
