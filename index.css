@@ -475,10 +475,11 @@ button {
 }
 
 @media screen and (max-width: 800px){
-    
+
     .comments{
-        margin-left: 7rem;
-        width: 400px;
+        margin-left: 3rem;
+        width: 70%;
+        align-self: center;
     }
 
     body{
@@ -518,4 +519,63 @@ button {
         display: flex;
         flex-direction: column; 
     }
+
+    .comments input{
+        background-color: white;
+        border: none;
+        font-family: 'Lobster', cursive;
+        border-bottom: 3px black solid;
+        margin: 10px;
+        font-size: 20px;
+        padding: 5px;
+        width: 70%;
+        
+        align-self: center;
+    }
+    
+    .comments h1{
+        align-self: center;
+        margin-left: 20px;
+    }
+    
+    .comments input:focus{
+        align-self: center;
+        color: var(--bg-color);
+        outline: none;
+    }
+    .comments textarea:focus{
+        align-self: center;
+        outline: none;
+    }
+    
+    
+    
+    .comments textarea{
+        border-radius: 10px;
+        font-family: 'Lobster', cursive;
+        align-self: center;
+        width: 60%;
+        resize: none;
+        margin-left: 10px;
+        background-color: var( --text-color);
+        border: none;
+        border: 1px black solid;
+        margin-bottom: 20px;
+        font-size: 15px;
+        padding: 5px;
+        color: var(--bg-color);
+        align-self: center;
+    }
+    
+    .comments button{
+        align-self: center;
+        background-color: transparent;
+        margin: 0px;
+        outline: none;
+        border: none;
+        font-size: 30px;
+        font-family: 'Lobster', cursive;
+      
+    }
+    
 }
