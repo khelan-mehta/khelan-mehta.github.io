@@ -3,11 +3,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 
+.main-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.comments{
+    margin-left: 20rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.comments input{
+    background-color: white;
+    border: none;
+    font-family: 'Lobster', cursive;
+    border-bottom: 3px black solid;
+    margin: 10px;
+    font-size: 20px;
+    padding: 5px;
+    width: 50%;
+    margin-left: 100px;
+}
+
+.comments h1{
+    margin-left: 140px;
+}
+
+.comments input:focus{
+    color: var(--bg-color);
+    outline: none;
+}
+.comments textarea:focus{
+    outline: none;
+}
+
+
+
+.comments textarea{
+    font-family: 'Lobster', cursive;
+    align-self: center;
+    width: 60%;
+    resize: none;
+    margin-left: 10px;
+    background-color: var( --text-color);
+    border: none;
+    border-bottom: 3px black solid;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 5px;
+    color: var(--bg-color);
+}
+
+.comments button{
+    font-family: ;
+    background-color: transparent;
+    margin: 0px;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+  
+}
+
+
+
+.comments{
+    
+    border-radius: 10px;
+    width: 30%;
+    background-color: white;
+    opacity: 0.9;
+    height: 400px;
+    overflow: scroll;
+}
+
 :root,
-
-
-
-
 :root.light {
     --responive-bg-color:#92E2F9;
 
@@ -60,6 +133,16 @@
   --logo-color: #3F196A;
 }
 
+.commentboxy{
+    display: flex;
+    flex-direction: column;
+}
+
+.commentbox{
+    
+    display: none;
+}
+
 
 body {
     background-image: var(--bg-background-image);
@@ -73,7 +156,8 @@ body {
     padding: 0;
     width: 100%;
     font-family: 'Lobster', cursive;
-    overflow: hidden;
+    
+    overflow: scroll;
     height: 100%;
 }
 .navbar {
@@ -332,16 +416,13 @@ button {
   .background {
     
     opacity: 1;
-    height: 400px;
+    
     position
     :
      absolute
     ;
       
-    display
-    :
-     block
-    ;
+  
       
     top
     : 0;
@@ -349,8 +430,7 @@ button {
     left
     : 0;
       
-    z-index
-    : 0;
+   
     }
 
 
@@ -396,9 +476,9 @@ button {
 
 @media screen and (max-width: 800px){
     body{
+        overflow: scroll;
         background-color: var(--responive-bg-color);
         background-image: none;
-        height:100%;
     }
 
    

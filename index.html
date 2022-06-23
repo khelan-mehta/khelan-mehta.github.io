@@ -30,6 +30,7 @@
        </div>
        
    </div>
+   <div class="main-content">
    <div class="writeup1" >
     <div class="container" >
         <div class="slider" >
@@ -134,20 +135,24 @@
           </div>
         </div>
       </div>
-    
-
- 
-
-
-    
-
-
    </div>
+
+   <div class="comments">
+        <h1>Comment</h1>
+        <input type="text" id="number" placeholder="Contact Number please :) ">
+        <button id="fetch">Fetch</button>
+        <div id="commentDisplay" class="commentbox commentboxy">
+            <input class="field" type="text" maxlength="20"  required id="Name" placeholder="">
+            <textarea name="" id="comment" cols="30" rows="10" placeholder="Your Kind words"></textarea>
+            <button id="express"> Express </button>
+        </div>
+   </div>
+</div>
    
 <hr style="border: 11px solid white; position: relative; top: -400px; z-index: -1; opacity: 0.6;">    
 <hr style="border: 11px solid white; position: relative; top: -400px; z-index: -1; opacity: 0.6;">    
 <hr class="by-hr">    
-<h4 class="byline" style="">Desiged by : Khelan Mehta</h4>
+<h4 class="byline" >Desiged by : Khelan Mehta</h4>
 </body>
 <script>
     window.
@@ -193,12 +198,107 @@ document.querySelectorAll('.slider__navlink').forEach((bullet, bulletIndex) => {
 
 const setTheme = theme => document.documentElement.className = theme;
 </script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyC8LtDFa5L8wuvawIDQJ-VNd5QOqnYjuQg",
+      authDomain: "thoughts-4c876.firebaseapp.com",
+      databaseURL: "https://thoughts-4c876-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "thoughts-4c876",
+      storageBucket: "thoughts-4c876.appspot.com",
+      messagingSenderId: "181450835956",
+      appId: "1:181450835956:web:8627329b0362b5b9f45ba1",
+      measurementId: "G-V80T3B1STQ"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+
+  
+
+
+
+import {getDatabase, ref, set, child, update, get, remove} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js"
+
+const db = getDatabase();
+
+var name = document.getElementById("Name");
+var number = document.getElementById("number");
+var comment = document.getElementById("comment");
+var commet = document.getElementById("commentDisplay");
+
+var express = document.getElementById("express");
+var fetch = document.getElementById("fetch");
+
+
+function InsertData(){
+
+        set(ref(db, "Names"+number.value), {
+            Names : name.value,
+            Number : number.value,
+            Comment : comment.value
+        })
+        .then(()=>{
+            alert("Thank You for your feedback :)")
+        })
+        .catch((error)=>{
+            alert("unsuccessful, error : "+error)
+        })
+
+
+}
+
+
+
+
+function SelectData ( ) { 
+    const dbref = ref ( db ) ; 
+    get ( child ( dbref , "Names"+number.value) ) .then ( ( snapshot ) => {  
+        if ( snapshot.exists()) { 
+            commet.classList.remove("commentbox");
+            name.value = "Hey "+snapshot.val().Names
+        
+        } 
+            
+             else { 
+                alert ( " No data found " );
+             }})}
+
+
+//function undel(){
+
+  //  commet.classList.remove("commentbox")
+
+//}
+
+
+fetch.addEventListener('click', SelectData);
+express.addEventListener('click', InsertData);
+//fetch.addEventListener('click', undel);
+
+
+
+</script>
+    
+
+
+
+
+    
+
 <canvas class=
     "background" style="z-index: -1;">
 </canvas>
 
 </html>
 
-<!--
-   
--->

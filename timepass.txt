@@ -1,0 +1,18 @@
+function SelectData ( ) { 
+    const dbref = ref ( db ) ; 
+    get ( child ( dbref , "Names"+number.value) ) .then ( ( snapshot ) => {  
+        if ( snapshot.exists()) { 
+            name.value = "Hey "+snapshot.val().Names} 
+            commet.classList.remove("commentbox")
+            
+             else { 
+                alert ( " No data found " );
+             }})}
+
+             let commet = document.getElementsById("comment-display");
+
+             <div id="comment-display" class="commentbox">
+        <input class="field" type="text" maxlength="20"  required id="Name" placeholder="">
+        <textarea name="" id="comment" cols="30" rows="10" placeholder="Your Kind words"></textarea>
+        <button id="express"> Express </button>
+    </div>

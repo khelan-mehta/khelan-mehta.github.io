@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lobster&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        body{
+            background-color: #92E2F9;
+            overflow: hidden;
+        }
+        
+        ::placeholder { /* Internet Explorer 10-11 */
+            color: #0f225e;
+            opacity: 0.5;
+        }
+
+        .form{
+
+            justify-content: center;
+            margin-top: 15rem;
+            margin-left: 35rem;
+            flex-direction: column;
+            display: flex;
+            width: 20%;
+        }
+        
+        form{   
+            
+            margin-left: 90px;
+        }
+        
+        h1{
+            font-family: 'Lobster', cursive;
+            
+        }
+        
+        .field{
+            font-size: 15px;
+            padding: 12px 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            border-bottom: 3px solid black;
+            border-radius: 10px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            -webkit-transition: 0.5s;
+            font-family: 'Lobster', cursive;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        .field:focus{
+            
+            opacity: 1;
+            color: black;
+            
+        }
+
+        button{
+            font-family: 'Lobster', cursive;
+            border: 0px;
+            margin-top: 30px;
+            background-color: transparent;
+            padding: 4px;
+        }
+
+        a{
+            text-decoration: none;
+            
+        }
+
+        .submit{  
+             z-index: 2;
+            font-size: 20px;
+            padding: 5px;
+            text-decoration: none;
+            color: #0f225e;
+            border: none;
+            background-color: transparent; 
+        }
+        
+    </style>
+    <script src="./particles.min.js"></script>
+</head>
+<body>
+    <div class="form">
+        
+       
+        <input class="field" type="text" maxlength="20" placeholder="  Dhang ka naam dena !" required id="Name" >
+        <input class="field" type="text" maxlength="10" minlength="10" placeholder=" Contact number :) " required id="number" >
+        
+        <button class="submit" id="insbtn">Submit</button>
+        <form action="./index.html">  
+            <button class="submit" id="insbtn">Jumpin</button>
+        </form>
+            
+    
+    </div>  
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyC8LtDFa5L8wuvawIDQJ-VNd5QOqnYjuQg",
+          authDomain: "thoughts-4c876.firebaseapp.com",
+          databaseURL: "https://thoughts-4c876-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "thoughts-4c876",
+          storageBucket: "thoughts-4c876.appspot.com",
+          messagingSenderId: "181450835956",
+          appId: "1:181450835956:web:8627329b0362b5b9f45ba1",
+          measurementId: "G-V80T3B1STQ"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    
+    
+    
+    import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js"
+    
+    const db = getDatabase();
+    
+    var name = document.getElementById("Name");
+    var number = document.getElementById("number");
+   
+    
+    var insbtn = document.getElementById("insbtn");
+    
+    
+    function InsertData(){
+    
+            set(ref(db, "Names"+number.value), {
+                Names: name.value,
+                Number : number.value
+            })
+            .then(()=>{
+                alert("data stored succesfully")
+            })
+            .catch((error)=>{
+                alert("unsuccessful, error : "+error)
+            })
+    
+    }
+    
+    insbtn.addEventListener('click', InsertData);
+    </script>
+</body>
+
+
+</html>
