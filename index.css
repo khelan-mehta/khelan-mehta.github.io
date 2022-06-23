@@ -476,6 +476,17 @@ button {
 
 @media screen and (max-width: 800px){
 
+    .navbar{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-r{
+        display: flex;
+    }
+    
+    
     .comments{
         margin-left: 3rem;
         width: 70%;
