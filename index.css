@@ -475,6 +475,12 @@ button {
 }
 
 @media screen and (max-width: 800px){
+    
+    .comments{
+        margin-left: 7rem;
+        width: 400px;
+    }
+
     body{
         overflow: scroll;
         background-color: var(--responive-bg-color);
@@ -506,5 +512,10 @@ button {
     }
     .byline{
         color: black;
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column; 
     }
 }
