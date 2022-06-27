@@ -91,6 +91,17 @@
   --byline-color:  white;
   --logo-color: black;
 }
+
+:root.red-hyphy{
+    --responive-bg-color:white;
+
+    --nav-color:#FB90CF;
+  --bg-background-image: url("./t7.svg");
+  --text-color: #FB90CF;
+  --bg-color: #CE0025;
+  --byline-color:  white;
+  --logo-color: black;
+}
  
 :root.dark {
     --responive-bg-color:#EAC6D0;
