@@ -93,12 +93,23 @@
 }
 
 :root.red-hyphy{
-    --responive-bg-color:white;
+    --responive-bg-color:#FB90CF;
 
-    --nav-color:#FB90CF;
+    --nav-color:black;
   --bg-background-image: url("./t7.svg");
   --text-color: #FB90CF;
   --bg-color: #CE0025;
+  --byline-color:  white;
+  --logo-color: black;
+}
+
+:root.blue-phoenix{
+    --responive-bg-color:#004CBF;
+
+    --nav-color:#10161F;
+  --bg-background-image: url("./t8.svg");
+  --text-color: #004CBF;
+  --bg-color: #10161F;
   --byline-color:  white;
   --logo-color: black;
 }
@@ -426,6 +437,7 @@ button {
       text-align: center;
       padding-top: 0px;
       margin: 0;
+      font-size: 30px;
     }
     
     .poem-content{
