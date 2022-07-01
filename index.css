@@ -144,6 +144,17 @@
   --logo-color: black;
 }
 
+:root.black-ign {
+    --responive-bg-color:#CFCFCF;
+    --nav-color: black;
+    --bg-background-image: url("./t9.svg");
+  --text-color: white;
+  --bg-color: black;
+  --byline-color:  white;
+  --logo-color: black;
+}
+
+
 :root.palms {
     --responive-bg-color:#92E2F9;
 
