@@ -153,6 +153,15 @@
   --byline-color:  white;
   --logo-color: black;
 }
+:root.red-phoenix {
+    --responive-bg-color:#FD9797;
+    --nav-color: black;
+    --bg-background-image: url("./t10.svg");
+  --text-color: white;
+  --bg-color: #B5200D;
+  --byline-color:  white;
+  --logo-color: black;
+}
 
 
 :root.palms {
